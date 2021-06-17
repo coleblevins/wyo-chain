@@ -7,6 +7,7 @@ const Block = require('./block');
 //Adding in test data and testing it
 const block = new Block('foo', 'bar', 'zoo', 'baz');
 console.log(block.toString());
+console.log(Block.genesis().toString());
 
 /*Run by opening to wyo-chain folder and inputting 
  npm run dev-test 

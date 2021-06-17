@@ -16,6 +16,11 @@ class Block{
             Hash     : ${this.hash.substring(0,10)}
             Data     : ${this.data}`;
     }
+    //Uses static to enable us to call the genesis function w/out 
+    //having to make a new instance of the block class
+    static genesis() {
+        return new this('Genesis time', '-----', 'first hash', []);
+    }
 }
 
 //Allows for other files to reference and use the block class
