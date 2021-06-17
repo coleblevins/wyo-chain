@@ -21,6 +21,16 @@ class Block{
     static genesis() {
         return new this('Genesis time', '-----', 'first hash', []);
     }
+
+    //Function to mine a block
+    static mineBlock(lastBlock, data) {
+        const timestamp = Date.now(); //time in milliseconds
+        const lastHash = lastBlock.hash;
+        const hash = 'todo-hash';
+        //data is already included in the arguments
+        
+        return new this(timestamp, lastHash, hash, data);
+    }
 }
 
 //Allows for other files to reference and use the block class

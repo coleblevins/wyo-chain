@@ -4,10 +4,14 @@
 referenced using './block' as if you are using the command line.*/
 const Block = require('./block');
 
+const fooBlock = Block.mineBlock(Block.genesis(), 'foo');
+
+console.log(fooBlock.toString());
+
 //Adding in test data and testing it
-const block = new Block('foo', 'bar', 'zoo', 'baz');
-console.log(block.toString());
-console.log(Block.genesis().toString());
+//const block = new Block('foo', 'bar', 'zoo', 'baz');
+//console.log(block.toString());
+//console.log(Block.genesis().toString());
 
 /*Run by opening to wyo-chain folder and inputting 
  npm run dev-test 
